@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ui xmlns="http://www.runewaker.com/">
+  <Frame name="AWPWindow" parent="UIParent" inherits="UICommonFrameTemplate" hidden="true" movable="true" enableMouse="true" frameStrata="HIGH">
+    <Size>
+      <AbsDimension x="1100" y="650"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER"/>
+    </Anchors>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="AWPTitle" inherits="GameTitleFont" justifyH="LEFT" justifyV="MIDDLE">
+          <Size>
+            <AbsDimension x="1010" y="24"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOPLEFT">
+              <Offset>
+                <AbsDimension x="20" y="8"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Frame name="AWPEditor">
+        <Size>
+          <AbsDimension x="1100" y="650"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="ARTWORK">
+            <FontString name="AWPSearchLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="270" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="78"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPTypeLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="166" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="127"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPRarityLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="100" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="194" y="127"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPCount" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="270" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="581"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPSelection" inherits="GameTitleFont" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="305" y="36"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="44"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPPlusLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="140" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="88"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPTierLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="145" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="480" y="88"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPStatsLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="305" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="153"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPBaseLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="84" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="541" y="176"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPNegative" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="305" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="369"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPStatus" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="305" y="30"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="602"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPFavoriteLabel" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="305" y="24"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="320" y="497"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPFavoriteHint" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="270" y="42"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="131"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPImportHint" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="425" y="29"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="650" y="578"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+        <Frames>
+          <EditBox name="AWPSearch" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="270" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="22" y="101"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Search()</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Frame name="AWPType" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="166" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="22" y="150"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,144);UIDropDownMenu_Initialize(this,function()AWP.FilterMenu('kind') end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <Frame name="AWPRarity" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="98" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="194" y="150"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,76);UIDropDownMenu_Initialize(this,function()AWP.FilterMenu('quality') end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <EditBox name="AWPPlus" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="140" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="112"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <EditBox name="AWPTier" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="145" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="480" y="112"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Button name="AWPPrevious" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="40" y="25"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="22" y="610"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Page(-1)</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPNext" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="40" y="25"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="252" y="610"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Page(1)</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPReset" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="170" y="25"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="72" y="610"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Reset()</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPEdit" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="145" y="27"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="457"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Edit()</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPMax" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="145" y="27"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="480" y="457"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Maximum()</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPCatalogTab" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="132" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="22" y="44"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Mode('catalog')</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPFavoritesTab" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="132" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="160" y="44"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Mode('favorites')</OnClick>
+            </Scripts>
+          </Button>
+          <EditBox name="AWPFavoriteName" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="305" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="523"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged/>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Button name="AWPSave" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="95" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="559"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.SaveCurrent()</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPDelete" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="95" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="425" y="559"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.DeleteCurrent()</OnClick>
+            </Scripts>
+          </Button>
+          <Button name="AWPUndo" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="95" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="530" y="559"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.UndoCurrent()</OnClick>
+            </Scripts>
+          </Button>
+          <Frame name="AWPList" enableMouse="true">
+            <Size>
+              <AbsDimension x="278" y="398"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="18" y="181"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Backdrop bgFile="Interface/AuctionFrame/AuctionFrame-Tooltip-Background" edgeFile="Interface/AuctionFrame/AuctionFrame-Tooltip-Border">
+              <EdgeSize>
+                <AbsValue val="8"/>
+              </EdgeSize>
+            </Backdrop>
+            <Scripts>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Frame>
+          <Button name="AWPRow1" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="188"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow2" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="220"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow3" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="252"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow4" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="284"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow5" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="316"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow6" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="348"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow7" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="380"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow8" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="412"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow9" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="444"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow10" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="476"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow11" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="508"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Button name="AWPRow12" enableMouse="true">
+            <Size>
+              <AbsDimension x="268" y="32"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="23" y="540"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <Texture name="$parentIcon">
+                  <Size>
+                    <AbsDimension x="26" y="26"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="3" y="3"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </Texture>
+                <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+                  <Size>
+                    <AbsDimension x="228" y="32"/>
+                  </Size>
+                  <Anchors>
+                    <Anchor point="TOPLEFT">
+                      <Offset>
+                        <AbsDimension x="36" y="0"/>
+                      </Offset>
+                    </Anchor>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <HighlightTexture file="Interface/AuctionFrame/AuctionFrameItem-Highlight" alphaMode="ADD">
+              <Size>
+                <AbsDimension x="268" y="32"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </HighlightTexture>
+            <Scripts>
+              <OnClick>AWP.SelectEntry(this.entry)</OnClick>
+              <OnMouseWheel>AWP.Scroll(delta)</OnMouseWheel>
+            </Scripts>
+          </Button>
+          <Frame name="AWPStat1" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="305" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="200"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,283);UIDropDownMenu_Initialize(this,function()AWP.Menu(1) end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <EditBox name="AWPValue1" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="84" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="541" y="227"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Frame name="AWPStat2" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="305" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="256"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,283);UIDropDownMenu_Initialize(this,function()AWP.Menu(2) end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <EditBox name="AWPValue2" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="84" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="541" y="283"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Frame name="AWPStat3" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="305" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="312"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,283);UIDropDownMenu_Initialize(this,function()AWP.Menu(3) end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <EditBox name="AWPValue3" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="84" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="541" y="339"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Frame name="AWPStat4" inherits="UIDropDownMenuTemplate">
+            <Size>
+              <AbsDimension x="305" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="320" y="395"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnLoad>UIDropDownMenu_SetWidth(this,283);UIDropDownMenu_Initialize(this,function()AWP.Menu(4) end)</OnLoad>
+            </Scripts>
+          </Frame>
+          <EditBox name="AWPValue4" inherits="UIPanelEditBoxTemplate" letters="60">
+            <Size>
+              <AbsDimension x="84" y="26"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="541" y="422"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnTextChanged>AWP.Changed(this)</OnTextChanged>
+              <OnEditFocusLost>if this~=AWPSearch then AWP.Fields() end</OnEditFocusLost>
+              <OnEnterPressed>this:ClearFocus()</OnEnterPressed>
+              <OnEscapePressed>this:ClearFocus()</OnEscapePressed>
+            </Scripts>
+          </EditBox>
+          <Button name="AWPCompareButton" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="425" y="27"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="650" y="610"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.Compare()</OnClick>
+            </Scripts>
+          </Button>
+          <GameTooltip name="AWPTooltip" inherits="GameTooltipTemplate" frameStrata="HIGH">
+            <Size>
+              <AbsDimension x="218" y="55"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="650" y="48"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </GameTooltip>
+        </Frames>
+      </Frame>
+      <Frame name="AWPComparison" hidden="true" enableMouse="true" frameStrata="HIGH">
+        <Size>
+          <AbsDimension x="1090" y="610"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="5" y="35"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="ARTWORK">
+            <FontString name="AWPCompareLeftTitle" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="500" y="30"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="38"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPCompareRightTitle" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="500" y="30"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="565" y="38"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+            <FontString name="AWPCompareNote" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE">
+              <Size>
+                <AbsDimension x="1030" y="42"/>
+              </Size>
+              <Anchors>
+                <Anchor point="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="22" y="550"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+        <Frames>
+          <Button name="AWPCompareBack" inherits="UIPanelButtonTemplate">
+            <Size>
+              <AbsDimension x="170" y="28"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="900" y="0"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+            <Scripts>
+              <OnClick>AWP.CloseComparison()</OnClick>
+            </Scripts>
+          </Button>
+          <GameTooltip name="AWPCompareLeft" inherits="GameTooltipTemplate" frameStrata="HIGH">
+            <Size>
+              <AbsDimension x="218" y="55"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="22" y="72"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </GameTooltip>
+          <GameTooltip name="AWPCompareRight" inherits="GameTooltipTemplate" frameStrata="HIGH">
+            <Size>
+              <AbsDimension x="218" y="55"/>
+            </Size>
+            <Anchors>
+              <Anchor point="TOPLEFT">
+                <Offset>
+                  <AbsDimension x="565" y="72"/>
+                </Offset>
+              </Anchor>
+            </Anchors>
+          </GameTooltip>
+        </Frames>
+      </Frame>
+      <Frame name="AWPDrag" enableMouse="true">
+        <Size>
+          <AbsDimension x="1015" y="32"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnMouseDown>AWPWindow:StartMoving(&quot;TOPLEFT&quot;)</OnMouseDown>
+          <OnMouseUp>AWPWindow:StopMovingOrSizing()</OnMouseUp>
+        </Scripts>
+      </Frame>
+    </Frames>
+    <Scripts>
+      <OnLoad>this:RegisterEvent(&quot;VARIABLES_LOADED&quot;)</OnLoad>
+      <OnEvent>if event==&quot;VARIABLES_LOADED&quot; then AWP.RegisterFavorites() end</OnEvent>
+      <OnShow>AWP.OnShow()</OnShow>
+    </Scripts>
+  </Frame>
+</Ui>
