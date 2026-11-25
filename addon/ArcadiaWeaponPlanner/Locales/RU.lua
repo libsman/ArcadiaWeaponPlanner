@@ -64,3 +64,10 @@ AWPLocales.RU={
  utility="Полезность",
  weapon="Урон оружия",
 }
+
+AWPLocales.RU.personalEffectiveness="Личная эффективность"
+AWPLocales.RU.includeEffectiveness="Учитывать"
+AWPLocales.RU.ignoreEffectiveness="Игнорировать"
+AWPLocales.RU.effectivenessUnavailable="Не удалось прочитать личную эффективность."
+
+AWPLocales.RU.includePersonalEffectiveness="Учитывать личную эффективность"

@@ -64,3 +64,10 @@ AWPLocales.JP={
  utility="補助",
  weapon="武器ダメージ",
 }
+
+AWPLocales.JP.personalEffectiveness="個人の腐化効果"
+AWPLocales.JP.includeEffectiveness="適用する"
+AWPLocales.JP.ignoreEffectiveness="無視する"
+AWPLocales.JP.effectivenessUnavailable="個人の腐化効果を読み取れません。"
+
+AWPLocales.JP.includePersonalEffectiveness="個人の腐化効果を適用する"

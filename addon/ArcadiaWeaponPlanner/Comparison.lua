@@ -27,10 +27,10 @@ function P.InstallImportHook()
  P.importHookInstalled=true
 end
 local function tooltip(frame,c,link,x)
- frame:SetItemDB(c.item);frame:SetHyperLink(link);frame:SetScale(1)
+ if not P.PreviewTooltip(frame,c,P.comparisonExtras,link) then return false end;frame:SetScale(1)
  local scale=math.min(1,470/frame:GetHeight(),508/frame:GetWidth())
  frame:SetScale(scale);frame:ClearAllAnchors()
- frame:SetAnchor('TOPLEFT','TOPLEFT',AWPComparison:GetName(),x/scale,72/scale);frame:Show()
+ frame:SetAnchor('TOPLEFT','TOPLEFT',AWPComparison:GetName(),x/scale,72/scale);frame:Show();return true
 end
 function P.Compare()
  if not P.baseline or not P.selected then return end
@@ -41,12 +41,14 @@ function P.Compare()
  if not leftLink or not rightLink then
   P.CloseComparison();AWPStatus:SetText(L('importFailed'));return false
  end
- AWPEditor:Hide();AWPComparison:Show()
+ AWPEditor:Hide();AWPComparison:Show();if P.EffectivenessField then P.EffectivenessField() end
  AWPCompareBack:SetText(L('back'));AWPCompareLeftTitle:SetText(L('imported')..': '..name(a))
  AWPCompareRightTitle:SetText(L('comparison')..': '..(AWPFavoriteName:GetText() or name(b)))
- AWPCompareNote:SetText(L(compatible and 'sameExtras' or 'differentTypes'))
- tooltip(AWPCompareLeft,a,leftLink,22);tooltip(AWPCompareRight,b,rightLink,565)
+ AWPCompareNote:SetText(compatible and '' or L('differentTypes'))
+ P.comparisonExtras=extras
+ if not tooltip(AWPCompareLeft,a,leftLink,22) or not tooltip(AWPCompareRight,b,rightLink,565) then P.CloseComparison();AWPStatus:SetText(L('effectivenessUnavailable')) end
+ P.comparisonExtras=nil
 end
 function P.CloseComparison()
- AWPComparison:Hide();AWPEditor:Show();P.Render()
+ AWPComparison:Hide();AWPEditor:Show();if P.EffectivenessField then P.EffectivenessField() end;P.Render()
 end

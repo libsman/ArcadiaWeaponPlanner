@@ -64,3 +64,10 @@ AWPLocales.CN={
  utility="实用",
  weapon="武器伤害",
 }
+
+AWPLocales.CN.personalEffectiveness="个人腐化效能"
+AWPLocales.CN.includeEffectiveness="计入"
+AWPLocales.CN.ignoreEffectiveness="忽略"
+AWPLocales.CN.effectivenessUnavailable="无法读取个人腐化效能。"
+
+AWPLocales.CN.includePersonalEffectiveness="计入个人腐化效能"

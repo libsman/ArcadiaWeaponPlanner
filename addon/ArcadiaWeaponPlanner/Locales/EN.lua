@@ -64,3 +64,10 @@ AWPLocales.EN={
  utility="Utility",
  weapon="Weapon damage",
 }
+
+AWPLocales.EN.personalEffectiveness="Personal effectiveness"
+AWPLocales.EN.includeEffectiveness="Include"
+AWPLocales.EN.ignoreEffectiveness="Ignore"
+AWPLocales.EN.effectivenessUnavailable="Personal effectiveness could not be read."
+
+AWPLocales.EN.includePersonalEffectiveness="Include personal effectiveness"

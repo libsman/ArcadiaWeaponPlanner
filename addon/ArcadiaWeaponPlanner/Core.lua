@@ -1,7 +1,7 @@
 -- SPDX-License-Identifier: GPL-3.0-only
 -- Copyright (C) 2026 Blackkid
 AWP = AWP or {}
-AWP.version = '1.0.0'
+AWP.version = '1.1.0'
 function AWP.Number(text, default, lo, hi)
  local n=tonumber(text)
  if not n or n~=n then return default end

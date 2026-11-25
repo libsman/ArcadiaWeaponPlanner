@@ -64,3 +64,10 @@ AWPLocales.FR={
  utility="Utilitaire",
  weapon="Dégâts d’arme",
 }
+
+AWPLocales.FR.personalEffectiveness="Efficacité personnelle"
+AWPLocales.FR.includeEffectiveness="Inclure"
+AWPLocales.FR.ignoreEffectiveness="Ignorer"
+AWPLocales.FR.effectivenessUnavailable="Impossible de lire l’efficacité personnelle."
+
+AWPLocales.FR.includePersonalEffectiveness="Inclure l’efficacité personnelle"

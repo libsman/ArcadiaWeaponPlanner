@@ -24,6 +24,12 @@
       </Layer>
     </Layers>
     <Frames>
+      <CheckButton name="AWPEffectiveness" inherits="UIPanelCheckButtonTemplate" frameStrata="DIALOG">
+        <Size><AbsDimension x="24" y="24"/></Size>
+        <Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="650" y="43"/></Offset></Anchor></Anchors>
+        <Layers><Layer level="ARTWORK"><FontString name="AWPEffectivenessLabel" inherits="GameFontHighlight" justifyH="LEFT" justifyV="MIDDLE"><Size><AbsDimension x="390" y="28"/></Size><Anchors><Anchor point="LEFT" relativePoint="RIGHT"><Offset><AbsDimension x="4" y="0"/></Offset></Anchor></Anchors></FontString></Layer></Layers>
+        <Scripts><OnClick>AWP.SetEffectiveness(this:IsChecked())</OnClick></Scripts>
+      </CheckButton>
       <Frame name="AWPEditor">
         <Size>
           <AbsDimension x="1100" y="650"/>
@@ -1424,8 +1430,9 @@
       </Frame>
     </Frames>
     <Scripts>
-      <OnLoad>this:RegisterEvent(&quot;VARIABLES_LOADED&quot;)</OnLoad>
-      <OnEvent>if event==&quot;VARIABLES_LOADED&quot; then AWP.RegisterFavorites() end</OnEvent>
+      <OnLoad>this:RegisterEvent(&quot;VARIABLES_LOADED&quot;);this:RegisterEvent(&quot;PLAYER_ABILITY_CHANGED&quot;);this:RegisterEvent(&quot;PLAYER_CORRUPTION_CHANGED&quot;);this:RegisterEvent(&quot;PLAYER_TITLE_ID_CHANGED&quot;)</OnLoad>
+      <OnEvent>if event==&quot;VARIABLES_LOADED&quot; then AWP.RegisterFavorites();AWP.RegisterSettings() elseif this:IsVisible() then AWP.refreshPending=true end</OnEvent>
+      <OnUpdate>AWP.RefreshPending(elapsedTime)</OnUpdate>
       <OnShow>AWP.OnShow()</OnShow>
     </Scripts>
   </Frame>

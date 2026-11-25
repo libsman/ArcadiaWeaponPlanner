@@ -5,11 +5,11 @@ ROOT=Path(__file__).resolve().parents[1]/'addon'/'ArcadiaWeaponPlanner'
 class ComparisonTests(unittest.TestCase):
  def setUp(self):
   self.lua=LuaRuntime(unpack_returned_tuples=True)
-  for file in ['Core.lua','Stats.lua','Catalog.lua','Favorites.lua','Import.lua']:
+  for file in ['Core.lua','Stats.lua','Catalog.lua','Favorites.lua','Import.lua','Effectiveness.lua']:
    self.lua.execute((ROOT/file).read_bytes())
   self.lua.execute('''
    function frame()return {visible=true,Hide=function(s)s.visible=false end,Show=function(s)s.visible=true end,IsVisible=function(s)return s.visible end,SetText=function(s,t)s.text=t end,GetText=function(s)return s.text end,SetItemDB=function(s,id)s.item=id end,SetHyperLink=function(s,l)s.link=l end,SetScale=function()end,ClearAllAnchors=function()end,SetAnchor=function()end,GetHeight=function()return 400 end,GetWidth=function()return 400 end} end
-   AWPWindow=frame();AWPEditor=frame();AWPComparison=frame();AWPComparison:Hide();AWPComparison.GetName=function()return 'AWPComparison' end
+   AWPEffectivenessLabel=frame();AWPEffectiveness=frame();AWPEffectiveness.SetChecked=function(s,v)s.checked=v end;AWPWindow=frame();AWPEditor=frame();AWPComparison=frame();AWPComparison:Hide();AWPComparison.GetName=function()return 'AWPComparison' end
    AWPCompareLeft=frame();AWPCompareRight=frame();AWPCompareLeftTitle=frame();AWPCompareRightTitle=frame();AWPCompareBack=frame();AWPCompareNote=frame();AWPFavoriteName=frame();AWPFavoriteName:SetText('Favorite')
    AWPStatus=frame();AWPImportHint=frame();AWP.Label=function(k)return k end;TEXT=function(k)return k end
    AWP.Render=function()rendered=true end;AWP.Selection=function()end;AWP.Fields=function()end;AWP.Rows=function()end

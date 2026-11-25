@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0
+- Include or ignore personal corruption effectiveness using a native checkbox above the preview. Include is the default; the choice persists across UI reloads.
+- Update editor and both comparison previews when character effectiveness changes.
+- Preserve original corruption rolls in imported items and favorites.
+- Remove the redundant same-runes/overdurability comparison note.
+- Translated the new controls into all eleven supported languages.
+
 ## 1.0.0
 First stable release.
 

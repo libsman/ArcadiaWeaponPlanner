@@ -64,3 +64,10 @@ AWPLocales.DE={
  utility="Utility",
  weapon="Waffenschaden",
 }
+
+AWPLocales.DE.personalEffectiveness="Persönliche Effektivität"
+AWPLocales.DE.includeEffectiveness="Berücksichtigen"
+AWPLocales.DE.ignoreEffectiveness="Ignorieren"
+AWPLocales.DE.effectivenessUnavailable="Persönliche Effektivität konnte nicht gelesen werden."
+
+AWPLocales.DE.includePersonalEffectiveness="Persönliche Effektivität berücksichtigen"

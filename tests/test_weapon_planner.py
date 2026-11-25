@@ -105,6 +105,7 @@ class PlannerTests(unittest.TestCase):
   for lang,loc in locales.items():self.assertEqual(set(loc.keys()),expected,lang)
  def test_corruption_change_invalidates_native_tooltip_cache(self):
   self.lua.execute((ROOT/'Import.lua').read_bytes())
+  self.lua.execute((ROOT/'Effectiveness.lua').read_bytes())
   for f in sorted((ROOT/'Locales').glob('*.lua')):self.lua.execute(f.read_bytes())
   self.lua.execute("GetLanguage=function()return 'DE' end;SlashCmdList={}")
   self.lua.execute((ROOT/'UI.lua').read_bytes())

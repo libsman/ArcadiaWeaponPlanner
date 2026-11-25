@@ -26,7 +26,7 @@ The planner never equips, consumes, buys or upgrades an item. Unsaved edits rese
 
 ## What the preview means
 
-The tooltip uses **your current character's modifiers** and assumes **overdurability**. It does not simulate a complete equipment change or predict total character DPS.
+The tooltip uses **your current character's modifiers** and assumes **overdurability**. **Personal effectiveness** defaults to **Include**; choose **Ignore** to preview corruption rolls at 100% personal effectiveness. The choice is saved and applies to both comparison sides. Original imports and favorites remain unchanged. The effectiveness roll itself is not amplified by personal effectiveness and therefore stays unchanged. Neutralization reads the native tooltip's two-decimal total, so tiny rounding differences are possible. It does not simulate a complete equipment change or predict total character DPS.
 
 For comparisons of the same item type, both sides use the imported runes and added stats. For different item types, both sides omit them. Imported corruption rolls are preserved exactly, including unfamiliar attribute IDs; the maximum-values action leaves unfamiliar rolls untouched.
 

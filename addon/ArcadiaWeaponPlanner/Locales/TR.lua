@@ -64,3 +64,10 @@ AWPLocales.TR={
  utility="Yardımcı",
  weapon="Silah hasarı",
 }
+
+AWPLocales.TR.personalEffectiveness="Kişisel etkinlik"
+AWPLocales.TR.includeEffectiveness="Dahil et"
+AWPLocales.TR.ignoreEffectiveness="Yok say"
+AWPLocales.TR.effectivenessUnavailable="Kişisel etkinlik okunamadı."
+
+AWPLocales.TR.includePersonalEffectiveness="Kişisel etkinliği dahil et"

@@ -146,9 +146,9 @@ function P.Render()
  if not link then AWPStatus:SetText(label('empty'));AWPTooltip:Hide();return end
  -- Native hyperlink reuse can retain old corruption when only field14 changes.
  -- Reset the preview source before parsing the new payload (verified in client).
- P.link=link;AWPTooltip:SetItemDB(w.id);AWPTooltip:SetHyperLink(link);AWPTooltip:SetScale(1)
- local scale=math.min(1,525/AWPTooltip:GetHeight(),425/AWPTooltip:GetWidth());AWPTooltip:SetScale(scale)
- AWPTooltip:ClearAllAnchors();AWPTooltip:SetAnchor('TOPLEFT','TOPLEFT',AWPWindow:GetName(),650/scale,48/scale);AWPTooltip:Show();AWPStatus:SetText('')
+ P.link=link;if not P.PreviewTooltip(AWPTooltip,P.CurrentConfig(),P.extras,link) then AWPStatus:SetText(label('effectivenessUnavailable'));return end;AWPTooltip:SetScale(1)
+ local scale=math.min(1,490/AWPTooltip:GetHeight(),425/AWPTooltip:GetWidth());AWPTooltip:SetScale(scale)
+ AWPTooltip:ClearAllAnchors();AWPTooltip:SetAnchor('TOPLEFT','TOPLEFT',AWPWindow:GetName(),650/scale,82/scale);AWPTooltip:Show();AWPStatus:SetText('')
 end
 function P.Show()if AWPWindow:IsVisible() then AWPWindow:Hide() else AWPWindow:Show() end end
 function P.OnShow()
@@ -160,7 +160,7 @@ function P.OnShow()
  for _,pair in ipairs({{'AWPSearchLabel','search'},{'AWPTypeLabel','type'},{'AWPRarityLabel','rarity'},{'AWPPlusLabel','plus'},{'AWPTierLabel','tier'},{'AWPStatsLabel','stats'},{'AWPNegative','negative'},{'AWPBaseLabel','base'},{'AWPFavoriteLabel','favoriteName'},{'AWPFavoriteHint','favoriteHint'},{'AWPCatalogTab','catalog'},{'AWPFavoritesTab','favorites'},{'AWPSave','save'},{'AWPDelete','delete'},{'AWPUndo','undo'}}) do _G[pair[1]]:SetText(label(pair[2])) end
  AWPMax:SetText(label('max'));AWPReset:SetText(label('reset'));AWPPrevious:SetText('<');AWPNext:SetText('>')
  AWPImportHint:SetText(label(P.baseline and 'importedHint' or 'importHint'));AWPCompareButton:SetText(label('compare'))
- P.Mode(P.mode);P.Fields()
+ P.EffectivenessField();P.Mode(P.mode);P.Fields()
  if not P.selected then for _,w in ipairs(P.Weapons) do if w.id==1210893 then P.Select(w);break end end else P.Selection();P.Render() end
 end
 SLASH_ARCADIAWEAPONPLANNER1='/awp';SlashCmdList['ARCADIAWEAPONPLANNER']=P.Show

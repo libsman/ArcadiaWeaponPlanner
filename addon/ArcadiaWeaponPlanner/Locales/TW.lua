@@ -64,3 +64,10 @@ AWPLocales.TW={
  utility="實用",
  weapon="武器傷害",
 }
+
+AWPLocales.TW.personalEffectiveness="個人腐化效能"
+AWPLocales.TW.includeEffectiveness="計入"
+AWPLocales.TW.ignoreEffectiveness="忽略"
+AWPLocales.TW.effectivenessUnavailable="無法讀取個人腐化效能。"
+
+AWPLocales.TW.includePersonalEffectiveness="計入個人腐化效能"

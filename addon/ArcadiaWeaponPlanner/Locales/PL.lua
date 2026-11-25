@@ -64,3 +64,10 @@ AWPLocales.PL={
  utility="Użyteczność",
  weapon="Obrażenia broni",
 }
+
+AWPLocales.PL.personalEffectiveness="Osobista skuteczność"
+AWPLocales.PL.includeEffectiveness="Uwzględnij"
+AWPLocales.PL.ignoreEffectiveness="Ignoruj"
+AWPLocales.PL.effectivenessUnavailable="Nie można odczytać osobistej skuteczności."
+
+AWPLocales.PL.includePersonalEffectiveness="Uwzględnij osobistą skuteczność"

@@ -64,3 +64,10 @@ AWPLocales.KR={
  utility="유틸리티",
  weapon="무기 피해",
 }
+
+AWPLocales.KR.personalEffectiveness="개인 타락 효율"
+AWPLocales.KR.includeEffectiveness="반영"
+AWPLocales.KR.ignoreEffectiveness="무시"
+AWPLocales.KR.effectivenessUnavailable="개인 타락 효율을 읽을 수 없습니다."
+
+AWPLocales.KR.includePersonalEffectiveness="개인 타락 효율 반영"
