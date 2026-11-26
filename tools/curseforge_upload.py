@@ -60,22 +60,22 @@ def main():
     token = os.environ.get('CURSEFORGE_API_TOKEN', '')
     if not token:
         raise ValueError('Set repository secret CURSEFORGE_API_TOKEN first')
-    versions_request = urllib.request.Request('https://chronicles-of-arcadia.curseforge.com/api/game/versions',
+    # This legacy catalog is not scoped to newly added games. Validate auth,
+    # but let upload metadata resolve gameVersionNames against the project.
+    versions_request = urllib.request.Request('https://upload.curseforge.com/api/game/versions',
         headers={'X-Api-Token': token})
     with urllib.request.urlopen(versions_request, timeout=30) as response:
-        versions = json.load(response)
-    if not any(v.get('name') == '11.0.0.0000' for v in versions):
-        raise ValueError('Expected CoA game version missing from authenticated API')
-    print('CurseForge authentication and CoA game version verified.')
+        json.load(response)
+    print('CurseForge API authentication verified.')
     if a.dry_run:
-        print('Dry run: no file uploaded.')
+        print('Dry run: no file uploaded; project permissions and version assignment are checked on upload.')
         return
     boundary = uuid.uuid4().hex
     body = (f'--{boundary}\r\nContent-Disposition: form-data; name="metadata"\r\n\r\n'.encode()
             + json.dumps(meta).encode() +
             f'\r\n--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="{name}"\r\nContent-Type: application/zip\r\n\r\n'.encode()
             + archive.read_bytes() + f'\r\n--{boundary}--\r\n'.encode())
-    req = urllib.request.Request(f'https://chronicles-of-arcadia.curseforge.com/api/projects/{a.project}/upload-file', data=body,
+    req = urllib.request.Request(f'https://upload.curseforge.com/api/projects/{a.project}/upload-file', data=body,
         headers={'X-Api-Token':token, 'Content-Type':'multipart/form-data; boundary='+boundary}, method='POST')
     # Do not retry a POST: a timeout may occur after the upload was accepted.
     try:
