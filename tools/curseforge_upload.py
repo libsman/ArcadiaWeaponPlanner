@@ -57,12 +57,19 @@ def main():
     archive = out/name
     verify(archive, Path('release-source/addon')/a.addon, a.addon)
     print('Verified release ZIP and metadata:', name, meta['releaseType'])
-    if a.dry_run:
-        print('Dry run: no CurseForge request sent.')
-        return
     token = os.environ.get('CURSEFORGE_API_TOKEN', '')
     if not token:
         raise ValueError('Set repository secret CURSEFORGE_API_TOKEN first')
+    versions_request = urllib.request.Request('https://chronicles-of-arcadia.curseforge.com/api/game/versions',
+        headers={'X-Api-Token': token})
+    with urllib.request.urlopen(versions_request, timeout=30) as response:
+        versions = json.load(response)
+    if not any(v.get('name') == '11.0.0.0000' for v in versions):
+        raise ValueError('Expected CoA game version missing from authenticated API')
+    print('CurseForge authentication and CoA game version verified.')
+    if a.dry_run:
+        print('Dry run: no file uploaded.')
+        return
     boundary = uuid.uuid4().hex
     body = (f'--{boundary}\r\nContent-Disposition: form-data; name="metadata"\r\n\r\n'.encode()
             + json.dumps(meta).encode() +
